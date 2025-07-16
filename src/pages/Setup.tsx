@@ -775,12 +775,13 @@ const Setup = () => {
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-vscode to-xcode bg-clip-text text-transparent">
             Setup Guide
           </h1>
-		<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-			Credits: <a className="decoration-wavy">https://gist.github.com/hoishing/2b024e625024e5b409f0bb5941688375#vscode-keybindings-for-xcode</a>
-		</p>
+		
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Install custom Xcode keybinds to make it feel like VSCode
           </p>
+		<p className="text-md text-foreground max-w-2xl mx-auto">
+			Credits: <a>https://gist.github.com/hoishing/2b024e625024e5b409f0bb5941688375</a>
+		</p>
         </div>
 
         <Navigation />
