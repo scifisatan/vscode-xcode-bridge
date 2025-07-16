@@ -41,17 +41,8 @@ export function KeybindCard({ keybind, searchTerm = "" }: KeybindCardProps) {
             )}
             
             <div className="flex items-center gap-4 pt-2">
-              <div className="flex items-center gap-2">
-                <Code className="h-4 w-4 text-xcode" />
-                <span className="text-sm font-medium text-muted-foreground">Xcode:</span>
-                <kbd className="bg-secondary text-secondary-foreground px-2 py-1 rounded text-sm font-mono border">
-                  {keybind.shortcut}
-                </kbd>
-              </div>
-              
               {keybind.vscodeEquivalent && keybind.vscodeEquivalent !== "N/A" && (
                 <>
-                  <ArrowRight className="h-3 w-3 text-muted-foreground" />
                   <div className="flex items-center gap-2">
                     <Code className="h-4 w-4 text-vscode" />
                     <span className="text-sm font-medium text-muted-foreground">VSCode:</span>
@@ -59,8 +50,17 @@ export function KeybindCard({ keybind, searchTerm = "" }: KeybindCardProps) {
                       {keybind.vscodeEquivalent}
                     </kbd>
                   </div>
+                  <ArrowRight className="h-3 w-3 text-muted-foreground" />
                 </>
               )}
+              
+              <div className="flex items-center gap-2">
+                <Code className="h-4 w-4 text-xcode" />
+                <span className="text-sm font-medium text-muted-foreground">Xcode:</span>
+                <kbd className="bg-secondary text-secondary-foreground px-2 py-1 rounded text-sm font-mono border">
+                  {keybind.shortcut}
+                </kbd>
+              </div>
             </div>
           </div>
         </div>
