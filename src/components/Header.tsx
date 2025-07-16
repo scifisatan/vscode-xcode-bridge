@@ -19,8 +19,8 @@ export function Header() {
         Keybind Lookup
       </h1>
       <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-        Quick reference for VSCode developers transitioning to Xcode. 
-        Find equivalent shortcuts and learn new workflows.
+        Custom Xcode keybinds that mirror VSCode shortcuts. 
+        Make Xcode feel familiar with these VSCode-inspired configurations.
       </p>
     </div>
   );

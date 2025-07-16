@@ -4,6 +4,7 @@ import { SearchBar } from "../components/SearchBar";
 import { CategoryFilter } from "../components/CategoryFilter";
 import { KeybindCard } from "../components/KeybindCard";
 import { StatsCard } from "../components/StatsCard";
+import { Navigation } from "../components/Navigation";
 import { keybinds, categories } from "../data/keybinds";
 
 const Index = () => {
@@ -28,6 +29,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12">
         <Header />
+        
+        <Navigation />
         
         <div className="space-y-8">
           {/* Search Section */}
