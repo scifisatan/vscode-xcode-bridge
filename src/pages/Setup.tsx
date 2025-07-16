@@ -75,12 +75,6 @@ const Setup = () => {
                 This guide will help you install custom Xcode keybinds that closely mirror VSCode shortcuts. 
                 These configurations will make your transition from VSCode to Xcode much smoother.
               </p>
-              <div className="flex items-center gap-2">
-                <AlertCircle className="h-4 w-4 text-accent" />
-                <span className="text-sm text-muted-foreground">
-                  <strong>Important:</strong> Always backup your existing keybinds before making changes.
-                </span>
-              </div>
             </CardContent>
           </Card>
 
@@ -89,23 +83,23 @@ const Setup = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
-                Backup Existing Keybinds
+                Create Keybind File
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Before installing custom keybinds, backup your current Xcode configuration.
+                Create a new keybind file in your Xcode KeyBindings directory.
               </p>
               <div className="bg-muted p-4 rounded-lg space-y-2">
-                <p className="text-sm font-medium">Location:</p>
+                <p className="text-sm font-medium">Create file:</p>
                 <div className="flex items-center gap-2">
                   <code className="bg-background px-2 py-1 rounded text-sm flex-1">
-                    ~/Library/Developer/Xcode/UserData/KeyBindings/
+                    ~/Library/Developer/Xcode/UserData/KeyBindings/VSCode.idekeybindings
                   </code>
                   <Button
                     size="sm"
                     variant="outline"
-                    onClick={() => handleCopy("~/Library/Developer/Xcode/UserData/KeyBindings/", 1)}
+                    onClick={() => handleCopy("~/Library/Developer/Xcode/UserData/KeyBindings/VSCode.idekeybindings", 1)}
                   >
                     {copiedStep === 1 ? <CheckCircle className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
@@ -119,16 +113,16 @@ const Setup = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
-                Download Keybind File
+                Copy XML Content
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Create a new keybind file with VSCode-inspired shortcuts.
+                Copy the XML content below and paste it into your VSCode.idekeybindings file.
               </p>
               <div className="bg-muted p-4 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium">VSCode-Xcode.idekeybindings</span>
+                  <span className="text-sm font-medium">XML Content</span>
                   <Button
                     size="sm"
                     variant="outline"
@@ -150,34 +144,18 @@ const Setup = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
-                Install in Xcode
+                Restart Xcode
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Place the keybind file in the correct Xcode directory.
+                Restart Xcode to load the new keybind configuration.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                  <div>
-                    <p className="font-medium">Save the XML content</p>
-                    <p className="text-sm text-muted-foreground">Save as <code>VSCode-Xcode.idekeybindings</code></p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                  <div>
-                    <p className="font-medium">Move to Xcode directory</p>
-                    <p className="text-sm text-muted-foreground">Place in <code>~/Library/Developer/Xcode/UserData/KeyBindings/</code></p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
-                  <div>
-                    <p className="font-medium">Restart Xcode</p>
-                    <p className="text-sm text-muted-foreground">Close and reopen Xcode for changes to take effect</p>
-                  </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
+                <div>
+                  <p className="font-medium">Close and reopen Xcode</p>
+                  <p className="text-sm text-muted-foreground">This ensures the new keybind file is properly loaded</p>
                 </div>
               </div>
             </CardContent>
@@ -213,7 +191,7 @@ const Setup = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-accent mt-0.5" />
                   <div>
-                    <p className="font-medium">Select VSCode-Xcode</p>
+                    <p className="font-medium">Select VSCode</p>
                     <p className="text-sm text-muted-foreground">Choose your custom keybind set from the dropdown</p>
                   </div>
                 </div>
