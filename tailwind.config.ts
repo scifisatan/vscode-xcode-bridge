@@ -52,6 +52,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'search-highlight': 'hsl(var(--search-highlight))',
+				'vscode': 'hsl(var(--vscode-blue))',
+				'xcode': 'hsl(var(--xcode-blue))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
